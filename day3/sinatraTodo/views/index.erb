@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Todo</title>
+  </head>
+  <body>
+  <h1>Welcome to the TodoList</h1>
+
+
+  <h2>Añadir una tareas</h2>
+    <form action="/add" method="POST"> 
+      <input type="text" name="task" placeholder="Nueva tarea"> 
+      <button type="submit">Add</button>
+    </form>
+
+  <h2>Listado de tareas pendientes</h2>
+    <ul>
+    <form action="/rem" method="POST"> 
+      <% @listado.each do |tas| 
+        if !tas.complete? %>
+        <li>ID: <%=tas.id%> Titulo: <%=tas.content%><button type="submit" name="remove" value="<%=tas.id%>">Borrar</button><button type="submit" name="state" value="<%=tas.id%>">Terminada</button></li>
+      <%end%> <%end%>
+    </ul>
+    <h2>Listado de tareas terminadas</h2>
+        <ul>
+      <% @listado.each do |tas| 
+        if tas.complete? %>
+        <li>ID: <%=tas.id%> Titulo: <%=tas.content%><button type="submit" name="remove" value="<%=tas.id%>">Borrar</button><button type="submit" name="state" value="<%=tas.id%>">Pendiente</button></li>
+      <%end%> <%end%>
+    </form>
+    </ul>
+  </body>
+</html>

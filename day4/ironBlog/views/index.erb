@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>IronBlog</title>
+  </head>
+  <body>
+  <h1>Welcome to the IronBlog</h1>
+  <h2>Entradas al blog</h2><a href="/add">Añadir entrada</a>
+    <ul>
+      <% @posts.each do |post| %>
+        <li><div><h3><a href="/post/<%= post.id%>"><%=post.title%></a></h3><h4> Fecha: <%=post.date.strftime('%d/%m/%y')%></h4></div><div>Resumen: <%=post.text%></div></li>
+      <%end%>
+    </ul>
+  </body>
+</html>

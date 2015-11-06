@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>IronBlog</title>
+  </head>
+  <body>
+  <h1>Welcome to the IronBlog</h1>
+  <h2><%=@post.title%></h2>
+    <h4> Fecha: <%=@post.date.strftime('%d/%m/%y')%></h4>
+    <p>Resumen: <%=@post.text%></p>
+    <a href="/">Volver</a>
+  </body>
+</html>

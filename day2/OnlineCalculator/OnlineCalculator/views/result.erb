@@ -1,0 +1,18 @@
+<html>
+<head>
+  <title>Final Result</title>
+</head>
+<body>
+  <center>
+    <h1>Result</h1>
+    <img src="Calculatorlogo.png" alt="Calculator logo" height="80"><br>
+    <br>
+    <h1><%= @first %> <%= @math_symbol %> <%= @second %> = <%= @result %></h1><br>
+    <a href="/">Go Back</a>
+
+    <form action="/save" method="POST">
+      <button type="submit" name="result" value="<%= @result %>">Save Result</button>
+    </form>
+  </center>
+</body>
+</html>

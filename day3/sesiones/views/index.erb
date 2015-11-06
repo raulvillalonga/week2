@@ -1,0 +1,17 @@
+<html>
+  <head>
+    <title>Sesion</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+  </head>
+  <body>
+    <h1>Sesion</h1>
+    <form action="/validar" method="POST">
+  	  Usuario:  
+  	  <input type="text" name="usu"> 
+      Pass:  
+      <input type="password" name="pass"> 
+      <button type="submit">Enviar</button>
+    </form>
+   <p><b><%= @incorrecto %></b></p>
+  </body>
+</html>

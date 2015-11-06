@@ -1,0 +1,27 @@
+<html>
+<head>
+  <title>Online Calculator</title>
+</head>
+<body>
+  <center>
+    <h1>Calculator</h1>
+    <img src="Calculatorlogo.png" alt="Calculator logo" height="80">
+    <form action="/calculate" method="POST">
+       Enter a number:  
+      <input type="number" name="first_number"  placeholder="1st number" value=<%= @result %>> 
+       Enter another number:
+      <input type="number" name="second_number" placeholder="2nd number"><br>
+
+      <button type="submit" name="operation" value="add">ADD</button>
+      <button type="submit" name="operation" value="sub">SUBTRACT</button>
+      <button type="submit" name="operation" value="mul">MULTIPLY</button>
+      <button type="submit" name="operation" value="div">DIVIDE</button>
+    </form>
+     <form action="/count" method="POST">
+       Let's count! Enter a number:  
+      <input type="number" name="last_number"  placeholder="last number"> 
+      <button type="submit" name="operation">Count</button>
+    </form>
+  </center>
+</body>
+</html>

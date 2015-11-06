@@ -1,0 +1,23 @@
+  <h1> My First Sinatra</h1>
+  <p>
+  <b>Autor:</b>
+  Raul Villaonga
+  </p>
+<%= @greeting %>
+
+  <% if Date.today.tuesday? %>
+  <p>
+    <strong>no</strong> nos gustan los lunes y hoy es 
+  </p>
+  <% end %>
+<p>
+  Fecha actual: <%= Date.today.strftime('%d/%m/%y') %>.<br>
+  <b>Hora actual: <%= Time.now.strftime('%H:%M') %>.</b>
+</p>
+
+<ul>
+  <% @ingredientes.each do |ingr| %>
+    <li><%= ingr %></li>
+  <% end %>
+
+</ul>

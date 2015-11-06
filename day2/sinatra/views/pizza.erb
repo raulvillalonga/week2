@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="pizza.css">
+  <title>Pizza</title>
+  <h1>Pizza</h1>
+</head>
+<body>
+  <img src="/pizza.png" alt="foto de la pizza">    
+  <ul>
+    <% @ingredientes.each do |ingr| %>
+      <li><%= ingr %></li>
+    <% end %>
+  </ul>
+</body>
+</html>
